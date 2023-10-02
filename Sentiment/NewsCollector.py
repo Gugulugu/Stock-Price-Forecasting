@@ -8,7 +8,7 @@ with open('config.json', 'r') as file:
 
 url = "https://newsapi.org/v2/everything"
 api_key = config['api_key']
-query = "finance apple"
+query = "apple"
 
 response = requests.get(url, params={
     "q": query,
@@ -26,4 +26,5 @@ for article in data.get("articles", []):
     print("Published At:", article.get("publishedAt"))
     print("Source:", article.get("source", {}).get("name"))
     print("Description:", article.get("description"))
+    print("Content:", article.get("content"))
     print("-----\n")
