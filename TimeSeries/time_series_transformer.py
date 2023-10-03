@@ -1,26 +1,35 @@
 import pandas as pd
 import os
+from FetchData import fetch_stock_dataset
+from tensorflow import keras
+from tensorflow.keras import layers
+import matplotlib.pyplot as plt
+import numpy as np
+
+
   
-names = ['year', 'month', 'day', 'dec_year', 'sn_value' , 
-         'sn_error', 'obs_num', 'extra']
-df = pd.read_csv('data/aapl.csv', index_col=False)
-# Split the 'date' column into three new columns: 'day', 'month', 'year'
-df['Month'] = df['Date'].str.split('/').str[0]
-df['Day'] = df['Date'].str.split('/').str[1]
-df['Year'] = df['Date'].str.split('/').str[2]
-df = df.rename(columns={'Close/Last': 'Close'})
+
+#df = pd.read_csv('data/aapl.csv', index_col=False)
+df = fetch_stock_dataset("AAPL")
 
 # format the date column
 df['Date'] = pd.to_datetime(df['Date'])
+
+# Split the 'date' column into three new columns: 'day', 'month', 'year'
+df['Year'] = df['Date'].dt.year
+df['Month'] = df['Date'].dt.month
+df['Day'] = df['Date'].dt.day
+
+#df = df.rename(columns={'Close/Last': 'Close'})
+
 
 # sort by date
 df.sort_values(by='Date', inplace=True, ascending=True)
 
 
 
-
 df = df[['Year','Month','Day','Date','Volume', 'Open', 'High', 'Low', 'Close']]
-df = df.replace(r'^\$', '', regex=True)
+#df = df.replace(r'^\$', '', regex=True)
 
 
 print("Starting file:")
@@ -43,25 +52,25 @@ spots_test = df_test['Close'].tolist()
 print("Training set has {} observations.".format(len(spots_train)))
 print("Test set has {} observations.".format(len(spots_test)))
 
-import matplotlib.pyplot as plt
-plt.figure(figsize=(14, 5))
-plt.plot(df_train['Date'],df_train['Close'], label='Train')
-plt.plot(df_test['Date'],df_test['Close'], label='Test')
-plt.xlabel('Date')
-plt.ylabel('Close')
-plt.legend(loc='best')
-plt.show()
+def plot_dataset(df_train,df_test):
+    plt.figure(figsize=(14, 5))
+    plt.plot(df_train['Date'],df_train['Close'], label='Train')
+    plt.plot(df_test['Date'],df_test['Close'], label='Test')
+    plt.xlabel('Date')
+    plt.ylabel('Close')
+    plt.legend(loc='best')
+    plt.show()
+#plot_dataset(df_train,df_test)
 
-import numpy as np
 
 def to_sequences(seq_size, obs):
     x = []
     y = []
 
-    for i in range(len(obs)-SEQUENCE_SIZE):
+    for i in range(len(obs)-seq_size):
         #print(i)
-        window = obs[i:(i+SEQUENCE_SIZE)]
-        after_window = obs[i+SEQUENCE_SIZE]
+        window = obs[i:(i+seq_size)]
+        after_window = obs[i+seq_size]
         window = [[x] for x in window]
         #print("{} - {}".format(window,after_window))
         x.append(window)
@@ -77,8 +86,7 @@ x_test,y_test = to_sequences(SEQUENCE_SIZE,spots_test)
 print("Shape of training set: {}".format(x_train.shape))
 print("Shape of test set: {}".format(x_test.shape))
 
-from tensorflow import keras
-from tensorflow.keras import layers
+
 
 def transformer_encoder(inputs, head_size, num_heads, ff_dim, dropout=0):
     # Normalization and Attention
@@ -135,7 +143,7 @@ model.compile(
     loss="mean_squared_error",
     optimizer=keras.optimizers.Adam(learning_rate=1e-4)
 )
-#model.summary()
+model.summary()
 
 callbacks = [keras.callbacks.EarlyStopping(patience=10, \
     restore_best_weights=True)]
@@ -156,21 +164,20 @@ from sklearn import metrics
 pred = model.predict(x_test)
 score = np.sqrt(metrics.mean_squared_error(pred,y_test))
 print("Score (RMSE): {}".format(score))
-print(pred)
 
-plt.figure(figsize=(10,6))
+def plot_predictions(test,predicted):
+    plt.figure(figsize=(10, 6))
+    plt.plot(test, label='True Future Values', color='blue')
+    plt.plot(predicted,  label='Predicted Future Values', color='red', linestyle='dashed')
+    plt.title('Time Series Prediction')
+    plt.xlabel('Time Step')
+    plt.ylabel('Closing Price')
+    plt.legend()
+    plt.savefig("./Documentation/Prediction_Results.png")
+    plt.show()
 
-# Plotting the actual future values
-plt.plot(y_test, label='True Future Values', color='blue')
+plot_predictions(y_test,pred)
 
-# Plotting the predicted future values
-plt.plot(pred, label='Predicted Future Values', color='red', linestyle='dashed')
-
-plt.title('Time Series Prediction')
-plt.xlabel('Time Step')
-plt.ylabel('Value')
-plt.legend()
-plt.show()
 
 
 

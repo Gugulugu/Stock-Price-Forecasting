@@ -19,7 +19,7 @@ response = requests.get(url, params={
 })
 
 data = response.json()
-
+"""
 for article in data.get("articles", []):
     print("Title:", article.get("title"))
     print("URL:", article.get("url"))
@@ -28,3 +28,9 @@ for article in data.get("articles", []):
     print("Description:", article.get("description"))
     print("Content:", article.get("content"))
     print("-----\n")
+"""
+
+# data to df
+import pandas as pd
+df = pd.DataFrame(data['articles'])
+print(df.head())
