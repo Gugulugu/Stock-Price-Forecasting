@@ -11,3 +11,6 @@ For Time Series forecasting I trained a transformer model on stock price data fr
 Results:
 ![results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png)
 
+# Reinforcement Learning
+
+will be implemented
