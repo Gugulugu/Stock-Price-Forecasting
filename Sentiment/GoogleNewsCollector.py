@@ -11,10 +11,6 @@ def create_news_dataset(keyword, start_date, end_date):
     start = start_date
     delta = datetime.timedelta(days=1)
     today = datetime.date.today()
-    proxy_dict = {
-    "http": "http://brd-customer-hl_26c8a425-zone-unblocker:836vcpnarcba@brd.superproxy.io:22225",
-    "https": "https://brd-customer-hl_26c8a425-zone-unblocker:836vcpnarcba@brd.superproxy.io:22225"
-    }
 
 
     if end_date is None:
@@ -40,24 +36,30 @@ def create_news_dataset(keyword, start_date, end_date):
             start_date= start_date_tuple, 
             end_date= end_date_tuple,
             exclude_websites = ["9to5Toys.com", "9to5Google.com", "9to5Mac.com", "Electrek","ign.com"],
-            proxy= proxy_dict,
+            #proxy= proxy_dict,
             )
         try:
             news = google_news.get_news(keyword)
             print("Found {} news for {} - {}".format(len(news), start_date_tuple, end_date_tuple))
+            if len(news) == 0:
+                break
             df_dict = pd.DataFrame(news)
             df_news = pd.concat([df_news, df_dict], ignore_index=True)
         except Exception as e:
             print(f"Failed to retrieve news for {start_date_tuple} - {end_date_tuple}: {e}")
 
-    df_news = df_news.sort_values(by=['published date'], ascending=False)
+    try:
 
-    df_news.to_csv('./Data/News/apple_news_' + str(start) + '_to_' + str(today) +'.csv', index=False)
+        df_news = df_news.sort_values(by=['published date'], ascending=False)
+
+        df_news.to_csv('./Data/News/apple_news_' + str(start) + '_to_' + str(today) +'.csv', index=False)
+    except Exception as e:
+        print(f"Error: IP has been blocked!")
 
     return df_news
 
 
-df = create_news_dataset("Apple", datetime.date(2023,10,1), None)
+df = create_news_dataset("Apple", datetime.date(2015,1,1), None)
 print(df.head())
 #print(df[['title','published date']])
 print(df.shape)
