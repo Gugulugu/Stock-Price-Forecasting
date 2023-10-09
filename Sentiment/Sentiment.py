@@ -1,10 +1,14 @@
 from transformers import pipeline
-from GoogleNewsCollector import get_news
+#from GoogleNewsCollector import get_news
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
+import glob
 
 #get data
-df_apple_news = get_news("Apple")
+data_path = glob.glob("./Data/News/apple_news_*")
+df_apple_news = pd.read_csv(data_path[0])
+print(df_apple_news.shape)
 print(df_apple_news.head())
 # load model
 sentiment_pipeline = pipeline(model= "ahmedrachid/FinancialBERT-Sentiment-Analysis")

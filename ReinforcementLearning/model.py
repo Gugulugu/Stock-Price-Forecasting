@@ -24,6 +24,7 @@ class StockTradingEnv(gym.Env):
 
     def step(self, action):
         # Implement your step logic here
+        
         pass
 
     def reset(self):
@@ -33,3 +34,23 @@ class StockTradingEnv(gym.Env):
     def render(self, mode='human'):
         # Implement rendering logic here
         pass
+
+
+from stable_baselines3 import PPO
+
+# Create the environment
+env = StockTradingEnv(data=merged_data)
+
+# Instantiate the agent
+agent = PPO('MlpPolicy', env, verbose=1)
+
+# Train the agent
+agent.learn(total_timesteps=20000)
+
+
+# Evaluate the agent
+obs = env.reset()
+for i in range(1000):
+    action, _states = agent.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    env.render()
