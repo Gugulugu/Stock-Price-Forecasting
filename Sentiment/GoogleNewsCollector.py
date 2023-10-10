@@ -23,7 +23,9 @@ def create_news_dataset(keyword, start_date, end_date):
     while (start_date <= today):
         #print(start_date, end="\n")
         start_date_tuple = start_date.timetuple()[:3]
+        current_end_date = start_date + delta
         end_date_tuple = (start_date + delta).timetuple()[:3]
+
         #print(start_date_tuple )
         #print(end_date_tuple )
         start_date += delta
@@ -52,7 +54,7 @@ def create_news_dataset(keyword, start_date, end_date):
 
         df_news = df_news.sort_values(by=['published date'], ascending=False)
 
-        df_news.to_csv('./Data/News/apple_news_' + str(start) + '_to_' + str(today) +'.csv', index=False)
+        df_news.to_csv('./Data/News/apple_news_' + str(start) + '_to_' + str(current_end_date) +'.csv', index=False)
     except Exception as e:
         print(f"Error: IP has been blocked!")
 

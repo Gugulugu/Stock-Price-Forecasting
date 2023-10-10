@@ -24,7 +24,22 @@ class StockTradingEnv(gym.Env):
 
     def step(self, action):
         # Implement your step logic here
+                # Get the current state of the environment
+        current_state = ...
         
+        # Get predictions from your models
+        stock_price_prediction = self.stock_price_model.predict(current_state)
+        sentiment_score = self.sentiment_model.predict(current_state)
+        
+        # Combine the predictions in some meaningful way
+        combined_info = ...  # e.g., a weighted sum, or some other function
+        
+        # Determine the new state, reward, and whether the episode is done
+        new_state = ...
+        reward = ...
+        done = ...
+        
+        return new_state, reward, done, {}
         pass
 
     def reset(self):
