@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/home/dz/Stocks/')
 from ReinforcementLearning.env.stocks_env import StocksEnv  # Add this line
 
 import gymnasium as gym

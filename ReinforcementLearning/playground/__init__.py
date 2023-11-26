@@ -13,7 +13,7 @@ STOCKS_APPL = fetch_stock_dataset("AAPL")
 
 register(
     id='stocks-v0',
-    entry_point='ReinforcementLearning.env.stocks_env:StocksEnv',
+    entry_point='ReinforcementLearning.playground.stocks_env:StocksEnv',
     kwargs={
         'df': deepcopy(STOCKS_APPL),
         'window_size': 30,
