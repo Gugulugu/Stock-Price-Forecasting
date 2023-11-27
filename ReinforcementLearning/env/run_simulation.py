@@ -1,5 +1,6 @@
 from stock_trading_env import StockTradingEnv
 
+
 PATH = '/home/dz/Stocks/ReinforcementLearning/data/test/STOCKS_GOOGL.csv'
 # Create an instance of the environment
 env = StockTradingEnv(csv_file=PATH)
@@ -34,3 +35,4 @@ for episode in range(num_episodes):
 
 # Close the environment
 env.close()
+

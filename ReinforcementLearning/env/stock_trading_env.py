@@ -20,6 +20,7 @@ class StockTradingEnv(gym.Env):
         self.initial_capital = initial_capital
         self.capital = initial_capital
         self.stock_holding = 0
+        self.portfolio_value = 0
 
         # Set transaction parameters
         self.max_buy = max_buy
@@ -81,7 +82,10 @@ class StockTradingEnv(gym.Env):
         self.current_step += 1
         done = self.current_step >= len(self.stock_data) - 1
 
-        info = {}
+        info = {self.current_step: {'portfolio_value': new_portfolio_value}}
+        self.portfolio_value = new_portfolio_value
+
+
 
         return self._next_observation(), reward, done, info
 
