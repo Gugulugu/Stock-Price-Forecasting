@@ -1,59 +1,63 @@
 # Stock-Price-Forecasting
 
-Goal of this project is to create a model to predict the future stock price, based on different kind of information and models (Time Series Forecasting, Sentiment Analysis, ...)
+## Project Overview
 
-## Architecture:
+This project aims to predict future stock prices using various models and methods like Time Series Forecasting, Sentiment Analysis, and Reinforcement Learning. The primary focus is on Google's stock price, leveraging advanced models and frameworks.
 
-![results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Architecture.png)
+## Table of Contents
 
-## Time Series Forecasting
+- [Architecture](#architecture)
+- [Time Series Forecasting](#time-series-forecasting)
+- [Sentiment Analysis](#sentiment-analysis)
+- [Reinforcement Learning](#reinforcement-learning)
+- [Results](#results)
+- [References](#references)
 
-For Time Series forecasting I trained a transformer model on stock price data from google
+## Architecture
 
-### Results:
+![Architecture Diagram](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Architecture.png)
 
-![results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png)
+### Time Series Forecasting
 
-## Sentiment Analysis
+- **Model Used**: Transformer model
+- **Data**: Google's stock price data
+- **Purpose**: To capture and predict stock price trends over time
 
-For Sentiment analysis a Pretrained Transformer-Model [FinancialBERT](https://www.researchgate.net/publication/358284785_FinancialBERT_-_A_Pretrained_Language_Model_for_Financial_Text_Mining) was used
+### Sentiment Analysis
 
-### Results:
+- **Model Used**: FinancialBERT
+- **Source**: [FinancialBERT Research Paper](https://www.researchgate.net/publication/358284785_FinancialBERT_-_A_Pretrained_Language_Model_for_Financial_Text_Mining)
+- **Purpose**: To analyze the sentiment of financial news and its impact on stock prices
 
-![results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png)
+### Reinforcement Learning
 
-## Reinforcement Learning
+- **Framework Used**: OpenAI Gym
+- **Approach**: Training an agent on a simulated stock market environment
+- **Unique Aspect**: The agent is trained on both real and predicted stock prices, as well as news sentiment
 
-The reinforcement learning part is built using the OpenAI Gym framework. The environment is a stock market with a stock price that changes over time. The agent can only buy and sell shares and has to learn the best actions to maximise the profit. The special approach in this project is that the agent is trained not only on the stock price ("close") itself, but also on the sentiment of the news and the predicted stock price from the stock price forecasting model. The sentiment is calculated using the FinancialBERT model.
+## Results
 
-### Datapreprocessing
+### Time Series Forecasting
 
-- The Sentiment of the news is normalized and split into three features (positive, neutral, negative).
-- The real stock price + the predicted stock price + the sentiment scores are merged into one dataframe.
+![Time Series Forecasting Results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png)
 
-### Environment
+### Sentiment Analysis
 
-The environment is a Trading Environment with only two actions BUY and SELL. The agent takes for every step the following information from the past as input:
+![Sentiment Analysis Results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png)
 
-- The current stock price
-- The predicted stock price
-- The sentiment of the news
-- The volume of the stock market
+### Reinforcement Learning
 
-How far back in time is determined by the Window Size. The Window Size is the number of days that are taken into account for every step. The Window Size is a hyperparameter and can be changed.
+#### Baseline Model (Stock Price Only)
 
-### Model Evaluation and Testing
+- ![Buy Sell Baseline](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Baseline.png)
+- ![Cumulative Returns Baseline](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Test.png)
 
-We trained the agent on Google's share price from 2020 to 2021 with different algorithms to test and evaluate which RL algorithm performs best. As a result, we found that the Proximal Policy Optimisation (PPO) algorithm performed best.
+#### Enhanced Model (Stock Price, Predicted Price, Sentiment)
 
-### Results
+- ![Buy Sell Enhanced](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Main.png)
+- ![Cumulative Returns Enhanced](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Main.png)
 
-#### Stock Price Prediction only using the Stock Price as input:
+## References
 
-![results](![Alt text](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Baseline.png))
-![results](![Alt text](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Test.png))
-
-#### Stock Price Prediction using the predicted future Stock Price and the Sentiment as input:
-
-![results](![Alt text](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Main.png))
-![results](![Alt text](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Main.png))
+- [FinancialBERT Research Paper](https://www.researchgate.net/publication/358284785_FinancialBERT_-_A_Pretrained_Language_Model_for_Financial_Text_Mining)
+- [OpenAI Gym](https://gym.openai.com/)
