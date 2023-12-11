@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This project aims to predict future stock prices using various models and methods like Time Series Forecasting, Sentiment Analysis, and Reinforcement Learning. The primary focus is on Google's stock price, leveraging advanced models and frameworks.
+This project aims to trade stocks using Reinforcement Learning, by using a combination of various models and methods like Time Series Forecasting, Sentiment Analysis.
+For demonstration purposes we are using the Google Stock Price Data, and News scraped from GoogleNews.
 
 ## Table of Contents
 
@@ -31,9 +32,18 @@ This project aims to predict future stock prices using various models and method
 
 ### Reinforcement Learning
 
-- **Framework Used**: OpenAI Gym
-- **Approach**: Training an agent on a simulated stock market environment
+- **Framework Used**: OpenAI Gym, Stable Baselines3
+- **Approach**: Training an agent on a simulated stock market environment. The agent can only buy and sell shares and has to learn the best actions to maximise the profit.
 - **Unique Aspect**: The agent is trained on both real and predicted stock prices, as well as news sentiment
+- **Environment**: The environment is a Trading Environment [Gym-anytrading](https://github.com/AminHP/gym-anytrading) with only two actions BUY and SELL. We modified the environment so that the agent takes for every step the following information from the past (determined by the window_size) as input:
+
+  - The current stock price
+  - The predicted stock price
+  - The sentiment of the news
+  - The volume of the stock market
+
+- **Datapreprocessing**: The Sentiment of the news is normalized and split into three features (positive, neutral, negative).
+- **Evaluation**: I trained the agent on Google's share price from 2020 to 2021 with different algorithms to test and evaluate which RL algorithm performs best. Based on the metrics the Proximal Policy Optimisation (PPO) algorithm performed the best.
 
 ## Results
 
