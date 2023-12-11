@@ -16,7 +16,7 @@ def create_news_dataset(keyword, start_date, end_date):
     if end_date is None:
         end_date = today
     else:
-        end_date = datetime.datetime.strptime(end_date, '%Y-%m-%d').date()
+        today = end_date
 
     df_news = pd.DataFrame()
     # iterate over range of dates
@@ -46,22 +46,25 @@ def create_news_dataset(keyword, start_date, end_date):
             if len(news) == 0:
                 break
             df_dict = pd.DataFrame(news)
+            df_dict['date'] = start_date - delta
             df_news = pd.concat([df_news, df_dict], ignore_index=True)
+            # add date
+            #df_news['date'] = start_date_tuple
         except Exception as e:
             print(f"Failed to retrieve news for {start_date_tuple} - {end_date_tuple}: {e}")
 
     try:
+        
+        df_news = df_news.sort_values(by=['date'], ascending=False)
 
-        df_news = df_news.sort_values(by=['published date'], ascending=False)
-
-        df_news.to_csv('./Data/News/apple_news_' + str(start) + '_to_' + str(current_end_date) +'.csv', index=False)
+        df_news.to_csv('./Data/News/' + search_term +'_news_' + str(start) + '_to_' + str(current_end_date) +'.csv', index=False)
     except Exception as e:
         print(f"Error: IP has been blocked!")
 
     return df_news
 
-
-df = create_news_dataset("Apple", datetime.date(2015,1,1), None)
+search_term = "google" 
+df = create_news_dataset(search_term, datetime.date(2020,10,24), datetime.date(2021,1,1))
 print(df.head())
 #print(df[['title','published date']])
 print(df.shape)

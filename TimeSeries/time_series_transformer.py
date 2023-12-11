@@ -5,12 +5,13 @@ from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn import metrics
 
 
   
 
 #df = pd.read_csv('data/aapl.csv', index_col=False)
-df = fetch_stock_dataset("AAPL")
+df = fetch_stock_dataset("GOOGL")
 
 # format the date column
 df['Date'] = pd.to_datetime(df['Date'])
@@ -43,8 +44,8 @@ df['High'] = df['High'].astype(float)
 df['Low'] = df['Low'].astype(float)
 df['Close'] = df['Close'].astype(float)
 # split into train and test sets
-df_train = df[:int(0.8 * len(df))]
-df_test = df[int(0.8 * len(df)):]
+df_train = df[:int(0.75 * len(df))]
+df_test = df[int(0.75 * len(df)):]
 
 spots_train = df_train['Close'].tolist()
 spots_test = df_test['Close'].tolist()
@@ -79,7 +80,7 @@ def to_sequences(seq_size, obs):
     return np.array(x),np.array(y)
     
     
-SEQUENCE_SIZE = 5
+SEQUENCE_SIZE = 10
 x_train,y_train = to_sequences(SEQUENCE_SIZE,spots_train)
 x_test,y_test = to_sequences(SEQUENCE_SIZE,spots_test)
 
@@ -131,8 +132,8 @@ input_shape = x_train.shape[1:]
 model = build_model(
     input_shape,
     head_size=256,
-    num_heads=4,
-    ff_dim=4,
+    num_heads=8,
+    ff_dim=8,
     num_transformer_blocks=4,
     mlp_units=[128],
     mlp_dropout=0.4,
@@ -159,11 +160,24 @@ model.fit(
 
 model.evaluate(x_test, y_test, verbose=1)
 
-from sklearn import metrics
 
 pred = model.predict(x_test)
 score = np.sqrt(metrics.mean_squared_error(pred,y_test))
 print("Score (RMSE): {}".format(score))
+
+# Convert predictions to a DataFrame
+pred_df = pd.DataFrame(pred, columns=['Predicted_Close'])
+
+# Adjust the index of the prediction DataFrame to align with df_test
+# The length of the predictions is less than the test set by the window size
+pred_df.index = df_test.index[SEQUENCE_SIZE:]
+
+# Concatenate the prediction DataFrame with df_test
+# Note: This will create NaN values for the first SEQUENCE_SIZE rows in the 'Predicted_Close' column
+df_test_with_predictions = df_test.join(pred_df)
+df_test_with_predictions.to_csv("./Data/Forecasting/Prediction_Results.csv", index=False)
+
+
 
 def plot_predictions(test,predicted):
     plt.figure(figsize=(10, 6))
@@ -177,8 +191,4 @@ def plot_predictions(test,predicted):
     plt.show()
 
 plot_predictions(y_test,pred)
-
-
-
-
 
