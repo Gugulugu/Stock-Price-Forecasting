@@ -61,3 +61,4 @@ This project aims to predict future stock prices using various models and method
 
 - [FinancialBERT Research Paper](https://www.researchgate.net/publication/358284785_FinancialBERT_-_A_Pretrained_Language_Model_for_Financial_Text_Mining)
 - [OpenAI Gym](https://gym.openai.com/)
+- [Gym-anytrading](https://github.com/AminHP/gym-anytrading)
