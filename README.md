@@ -53,9 +53,7 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 
 ### Sentiment Analysis
 
-![Sentiment Analysis Results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png)
-
-### Reinforcement Learning
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png" width="500" height="300">
 
 #### Baseline Model (Stock Price Only)
 
