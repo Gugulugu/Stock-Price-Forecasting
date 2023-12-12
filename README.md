@@ -7,12 +7,47 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 
 ## Table of Contents
 
+- [Installation](#installation)
 - [Architecture](#architecture)
 - [Time Series Forecasting](#time-series-forecasting)
 - [Sentiment Analysis](#sentiment-analysis)
 - [Reinforcement Learning](#reinforcement-learning)
 - [Results](#results)
 - [References](#references)
+
+## Installation
+
+Follow these steps to set up the project on your local machine:
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Python (3.x recommended)
+- pip (Python package manager)
+
+1. **Clone the Repository**  
+   First, clone the repository to your local machine using Git:
+
+   ```
+   git clone https://github.com/Gugulugu/Stock-Price-Forecasting.git
+   ```
+
+   Navigate into the project directory:
+
+   ```
+   cd Stock-Price-Forecasting
+   ```
+
+2. **Create a Virtual Environment (Optional but Recommended)**
+   ```
+   python -m venv venv
+   ```
+3. **Install Dependencies**  
+   Install all the required packages using the `requirements.txt` file:
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Architecture
 
@@ -35,7 +70,7 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 - **Framework Used**: OpenAI Gym, Stable Baselines3
 - **Approach**: Training an agent on a simulated stock market environment. The agent can only buy and sell shares and has to learn the best actions to maximise the profit.
 - **Unique Aspect**: The agent is trained on both real and predicted stock prices, as well as news sentiment
-- **Environment**: The environment is a Trading Environment [Gym-anytrading](https://github.com/AminHP/gym-anytrading) with only two actions BUY and SELL. We modified the environment so that the agent takes for every step the following information from the past (determined by the window_size) as input:
+- **Environment**: The environment is a Trading Environment [Gym-anytrading](https://github.com/AminHP/gym-anytrading) with only two actions BUY and SELL. I modified the environment so that the agent takes for every step the following information from the past (determined by the window_size) as input:
 
   - The current stock price
   - The predicted stock price
@@ -48,7 +83,6 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 ## Results
 
 ### Time Series Forecasting
-
 
 <img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png" width="600" height="350">
 

@@ -1,12 +1,10 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-import gymnasium as gym
-from trading_env import TradingEnv, Actions, Positions
+from trading_env import  Actions
 from stocks_env import StocksEnv
 
-from stable_baselines3 import A2C,PPO
+from stable_baselines3 import PPO
 
 import quantstats as qs
 
