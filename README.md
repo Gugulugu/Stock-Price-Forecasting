@@ -49,21 +49,22 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 
 ### Time Series Forecasting
 
-![Time Series Forecasting Results](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png)
+
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Prediction_Results.png" width="600" height="350">
 
 ### Sentiment Analysis
 
-<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png" width="500" height="300">
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/google_news_sentiment_class.png" width="600" height="350">
 
 #### Baseline Model (Stock Price Only)
 
-- ![Buy Sell Baseline](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Baseline.png)
-- ![Cumulative Returns Baseline](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Test.png)
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Baseline.png" width="800" height="300">
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Test.png" width = "500">
 
-#### Enhanced Model (Stock Price, Predicted Price, Sentiment)
+#### Enhanced Model (Stock Price, Predicted Future Stock Price, Sentiment)
 
-- ![Buy Sell Enhanced](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Main.png)
-- ![Cumulative Returns Enhanced](https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Main.png)
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Main.png" width="800" height="300">
+<img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Main.png" width = "500">
 
 ## References
 
