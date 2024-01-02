@@ -13,6 +13,7 @@ For demonstration purposes we are using the Google Stock Price Data, and News sc
 - [Sentiment Analysis](#sentiment-analysis)
 - [Reinforcement Learning](#reinforcement-learning)
 - [Results](#results)
+- [Next Steps](#next-steps)
 - [References](#references)
 
 ## Installation
@@ -99,6 +100,14 @@ Ensure you have the following installed:
 
 <img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Buy_Sell_Main.png" width="800" height="300">
 <img src="https://github.com/Gugulugu/Stock-Price-Forecasting/blob/main/Documentation/Cumulative_Returns_Main.png" width = "500">
+
+## Next Steps
+
+- [ ] Generate a bigger set of training/test data (scrapping more news)
+- [ ] Train and test the model on a bigger dataset
+- [ ] Train and test the model on more stocks
+- [ ] Implement a more complex Time Series Forecasting model
+- [ ] Implement a more complex trading environment
 
 ## References
 
