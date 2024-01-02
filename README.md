@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project aims to trade stocks using Reinforcement Learning, by using a combination of various models and methods like Time Series Forecasting, Sentiment Analysis.
-For demonstration purposes we are using the Google Stock Price Data, and News scraped from GoogleNews.
+For demonstration purposes I am using the Google Stock Price Data, and News scraped from GoogleNews.
 
 ## Table of Contents
 
@@ -56,7 +56,7 @@ Ensure you have the following installed:
 
 ### Time Series Forecasting
 
-- **Model Used**: Transformer model
+- **Model Used**: Transformer (Time series)
 - **Data**: Google's stock price data
 - **Purpose**: To capture and predict stock price trends over time
 
