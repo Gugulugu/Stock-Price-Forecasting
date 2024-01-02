@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 from trading_env import  Actions
 from stocks_env import StocksEnv
 
-from stable_baselines3 import PPO
+from stable_baselines3 import PPO,DQN, A2C
 
 import quantstats as qs
 
 # Create Env
 
-df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset.csv')
+df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 # date as index
 df = df.set_index('Date')
@@ -29,10 +29,17 @@ env = StocksEnv(
 
 print("observation_space:", env.observation_space)
 
+# learning rate schedule
+def learning_rate_schedule(progress):
+    initial_lr = 0.003
+    final_lr = 0.00003
+    lr = initial_lr * (1 - progress) + final_lr * progress
+    return lr
+
 #Train Env
 env.reset(seed=2023)
-model = PPO('MlpPolicy', env, verbose=0)
-model.learn(total_timesteps=100_000)
+model = PPO('MlpPolicy', env, verbose=0, tensorboard_log="./ReinforcementLearning/results/logs/", learning_rate=learning_rate_schedule)
+model.learn(total_timesteps=100_000, progress_bar= True)
 
 
 #Test Env

@@ -12,7 +12,7 @@ from trading_env import TradingEnv, Actions, Positions
 from stocks_env import StocksEnv
 
 
-from stable_baselines3 import A2C, PPO
+from stable_baselines3 import A2C, PPO, DQN
 from stable_baselines3.common.callbacks import BaseCallback
 
 import torch
@@ -21,7 +21,7 @@ env_name = 'test'
 
 # Create Env
 
-df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset.csv')
+df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 # date as index
 df = df.set_index('Date')
@@ -178,7 +178,7 @@ learning_timesteps_list_in_K = [25]
 # learning_timesteps_list_in_K = [500, 1000, 3000, 5000]
 
 # RL Algorithms: https://stable-baselines3.readthedocs.io/en/master/guide/algos.html
-model_class_list = [A2C, PPO]
+model_class_list = [A2C, PPO, DQN]
 
 for timesteps in learning_timesteps_list_in_K:
     total_learning_timesteps = timesteps * 1000

@@ -1,51 +1,73 @@
 import pandas as pd
 import os
-from FetchData import fetch_stock_dataset
+from fetch_data import fetch_stock_dataset
 from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import metrics
+from datetime import timedelta, datetime
 
 
   
+start_date = "2019-01-01"
+end_date = "2020-01-01"
 
-#df = pd.read_csv('data/aapl.csv', index_col=False)
-df = fetch_stock_dataset("GOOGL")
-
-# format the date column
-df['Date'] = pd.to_datetime(df['Date'])
-
-# Split the 'date' column into three new columns: 'day', 'month', 'year'
-df['Year'] = df['Date'].dt.year
-df['Month'] = df['Date'].dt.month
-df['Day'] = df['Date'].dt.day
-
-#df = df.rename(columns={'Close/Last': 'Close'})
+start_date = datetime.strptime(start_date, "%Y-%m-%d")
+start_date = start_date - timedelta(days=20)
+start_date = start_date.strftime("%Y-%m-%d")
 
 
-# sort by date
-df.sort_values(by='Date', inplace=True, ascending=True)
+df_train = fetch_stock_dataset("GOOGL", start_date = "2000-01-01", end_date = start_date)
+df_test = fetch_stock_dataset("GOOGL", start_date = start_date, end_date = end_date)
+#df = fetch_stock_dataset("GOOGL", start_date = "2000-01-01", end_date = "2020-01-01")
+
+def preprocess_data(df):
+    # format the date column
+    df['Date'] = pd.to_datetime(df['Date'])
+
+    # Split the 'date' column into three new columns: 'day', 'month', 'year'
+    df['Year'] = df['Date'].dt.year
+    df['Month'] = df['Date'].dt.month
+    df['Day'] = df['Date'].dt.day
+
+    #df = df.rename(columns={'Close/Last': 'Close'})
+
+
+    # sort by date
+    df.sort_values(by='Date', inplace=True, ascending=True)
 
 
 
-df = df[['Year','Month','Day','Date','Volume', 'Open', 'High', 'Low', 'Close']]
-#df = df.replace(r'^\$', '', regex=True)
+    df = df[['Year','Month','Day','Date','Volume', 'Open', 'High', 'Low', 'Close']]
+    #df = df.replace(r'^\$', '', regex=True)
 
 
-print("Starting file:")
-print(df[0:10])
+    print("Starting file:")
+    print(df[0:10])
 
-print("Ending file:")
-print(df[-10:])
+    print("Ending file:")
+    print(df[-10:])
 
-df['Open'] = df['Open'].astype(float)
-df['High'] = df['High'].astype(float)
-df['Low'] = df['Low'].astype(float)
-df['Close'] = df['Close'].astype(float)
+    df['Open'] = df['Open'].astype(float)
+    df['High'] = df['High'].astype(float)
+    df['Low'] = df['Low'].astype(float)
+    df['Close'] = df['Close'].astype(float)
+    
+    return df
+
+#df = preprocess_data(df)
+df_train = preprocess_data(df_train)
+df_test = preprocess_data(df_test)
+
+
 # split into train and test sets
-df_train = df[:int(0.75 * len(df))]
-df_test = df[int(0.75 * len(df)):]
+def split_dataset(df):
+    df_train = df[:int(0.75 * len(df))]
+    df_test = df[int(0.75 * len(df)):]
+    return df_train, df_test
+
+#df_train, df_test = split_dataset(df)
 
 spots_train = df_train['Close'].tolist()
 spots_test = df_test['Close'].tolist()
@@ -175,7 +197,7 @@ pred_df.index = df_test.index[SEQUENCE_SIZE:]
 # Concatenate the prediction DataFrame with df_test
 # Note: This will create NaN values for the first SEQUENCE_SIZE rows in the 'Predicted_Close' column
 df_test_with_predictions = df_test.join(pred_df)
-df_test_with_predictions.to_csv("./Data/Forecasting/Prediction_Results.csv", index=False)
+df_test_with_predictions.to_csv("./Data/Forecasting/2012-2020/Prediction_Results_"+ start_date + "-" + end_date +".csv", index=False)
 
 
 

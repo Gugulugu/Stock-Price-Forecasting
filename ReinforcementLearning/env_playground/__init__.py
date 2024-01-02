@@ -2,7 +2,7 @@ from gymnasium.envs.registration import register
 from copy import deepcopy
 import sys
 sys.path.append('/home/dz/')
-from Stocks.TimeSeries.FetchData import fetch_stock_dataset
+from fetch_data import fetch_stock_dataset
 
 
 import pandas as pd

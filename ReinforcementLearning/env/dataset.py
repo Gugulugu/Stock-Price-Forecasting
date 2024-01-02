@@ -3,8 +3,8 @@ import numpy as np
 
 # Preprocess the data from sentiment analysis and forecasting
 
-forecast_file_path = "./Data/Forecasting/Prediction_Results.csv"
-sentiment_file_path ="./Sentiment/Prediction/google_news_sentiment.csv"
+forecast_file_path = "./Data/Forecasting/Merge/google_forecasting_2012-01-01_to_2020-01-01.csv"
+sentiment_file_path ="./Sentiment/Prediction_results/google_train_news_sentiment.csv"
 
 # Load the forecast data
 df_forecast = pd.read_csv(forecast_file_path)
@@ -60,10 +60,10 @@ def merge_dataframes(df_forecast, df_sentiment):
     return df_merged
 
 # Preprocess the data
-df_forecast = preprocess_forecast_data(df_forecast, start_date='2020-01-01', end_date='2021-01-01' )
+df_forecast = preprocess_forecast_data(df_forecast, start_date='2012-01-01', end_date='2020-01-01' )
 df_sentiment = preprocess_sentiment_data(df_sentiment)
 df_merged = merge_dataframes(df_forecast, df_sentiment)
 print(df_merged.head())
 
 # Save the merged dataframe
-df_merged.to_csv("./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset.csv", index=False)
+df_merged.to_csv("./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train.csv", index=False)

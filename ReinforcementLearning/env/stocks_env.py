@@ -32,7 +32,7 @@ class StocksEnv(TradingEnv):
         volume = volume[self.frame_bound[0]-self.window_size:self.frame_bound[1]]
 
         diff = np.insert(np.diff(prices), 0, 0)
-        signal_features = np.column_stack((prices, diff, predicted_price, volume, neutral_norm, negative_norm, positive_norm))
+        signal_features = np.column_stack((prices, diff, positive_norm, negative_norm, neutral_norm, volume, predicted_price))
         #print(signal_features)
 
         return prices.astype(np.float32), signal_features.astype(np.float32)
