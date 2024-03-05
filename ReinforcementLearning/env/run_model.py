@@ -10,14 +10,14 @@ import quantstats as qs
 
 # Create Env
 
-df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train.csv')
+df = pd.read_csv('./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train_2012-2018.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 # date as index
 df = df.set_index('Date')
 
 print(df.head())
 
-window_size = 10
+window_size = 100    # 50 best
 start_index = window_size
 end_index = len(df)
 
@@ -29,21 +29,16 @@ env = StocksEnv(
 
 print("observation_space:", env.observation_space)
 
-# learning rate schedule
-def learning_rate_schedule(progress):
-    initial_lr = 0.003
-    final_lr = 0.00003
-    lr = initial_lr * (1 - progress) + final_lr * progress
-    return lr
 
 #Train Env
 env.reset(seed=2023)
-model = PPO('MlpPolicy', env, verbose=0, tensorboard_log="./ReinforcementLearning/results/logs/", learning_rate=learning_rate_schedule)
-model.learn(total_timesteps=100_000, progress_bar= True)
+model = PPO('MlpPolicy', env, verbose=0, tensorboard_log="./ReinforcementLearning/results/logs/")
+#model = DQN('MlpPolicy', env, verbose=0, tensorboard_log="./ReinforcementLearning/results/logs/")
+model.learn(total_timesteps=1_000_000, progress_bar= True)
 
 
 #Test Env
-action_stats = {Actions.Sell: 0, Actions.Buy: 0}
+action_stats = {Actions.Sell: 0, Actions.Buy: 0, Actions.Hold: 0}
 
 observation, info = env.reset(seed=2023)
 

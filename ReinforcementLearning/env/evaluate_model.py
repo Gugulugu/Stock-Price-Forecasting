@@ -173,9 +173,9 @@ plot_settings['rnd_rewards'] = {'label': label}
 
 
 
-learning_timesteps_list_in_K = [25]
+#learning_timesteps_list_in_K = [25]
 # learning_timesteps_list_in_K = [50, 250, 500]
-# learning_timesteps_list_in_K = [500, 1000, 3000, 5000]
+learning_timesteps_list_in_K = [500, 1000, 3000]
 
 # RL Algorithms: https://stable-baselines3.readthedocs.io/en/master/guide/algos.html
 model_class_list = [A2C, PPO, DQN]

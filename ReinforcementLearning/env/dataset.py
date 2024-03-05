@@ -65,5 +65,13 @@ df_sentiment = preprocess_sentiment_data(df_sentiment)
 df_merged = merge_dataframes(df_forecast, df_sentiment)
 print(df_merged.head())
 
+# split data into train and test, based on date
+df_train = df_merged[df_merged['Date'] < '2018-01-01']
+df_test = df_merged[df_merged['Date'] >= '2018-01-01']
+df_test = df_test[df_test['Date'] < '2019-01-01']
+
+
 # Save the merged dataframe
-df_merged.to_csv("./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train.csv", index=False)
+df_train.to_csv("./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_train_2012-2018.csv", index=False)
+df_test.to_csv("./ReinforcementLearning/Dataset/Google_Sentiment_Forecast/Stock_Forecast_Dataset_test_2018-2019.csv", index=False)
+

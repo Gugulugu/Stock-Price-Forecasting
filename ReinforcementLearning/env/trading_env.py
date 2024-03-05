@@ -10,6 +10,7 @@ import gymnasium as gym
 class Actions(Enum):
     Sell = 0
     Buy = 1
+    Hold = 2
 
 
 class Positions(Enum):
@@ -54,6 +55,7 @@ class TradingEnv(gym.Env):
         self._total_profit = None
         self._first_rendering = None
         self.history = None
+        self._action_history = None
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
@@ -68,6 +70,7 @@ class TradingEnv(gym.Env):
         self._total_profit = 1.  # unit
         self._first_rendering = True
         self.history = {}
+        self._action_history = []
 
         observation = self._get_observation()
         info = self._get_info()
@@ -80,6 +83,8 @@ class TradingEnv(gym.Env):
     def step(self, action):
         self._truncated = False
         self._current_tick += 1
+        self._action_history.append(int(action))
+
 
         if self._current_tick == self._end_tick:
             self._truncated = True
@@ -95,6 +100,9 @@ class TradingEnv(gym.Env):
             (action == Actions.Sell.value and self._position == Positions.Long)
         ):
             trade = True
+
+        elif action == Actions.Hold.value:  # New condition for Hold action
+            trade = False
 
         if trade:
             self._position = self._position.opposite()

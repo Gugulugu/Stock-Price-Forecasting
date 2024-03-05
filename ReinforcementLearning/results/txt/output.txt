@@ -1,0 +1,327 @@
+Window Size: 20
+Test action stats: {<Actions.Sell: 0>: 25, <Actions.Buy: 1>: 61, <Actions.Hold: 2>: 144}
+Test info: {'total_reward': 1.6692408180235887, 'total_profit': 0.8378707805906633, 'position': <Positions.Long: 1>}
+Window Size: 30
+Test action stats: {<Actions.Sell: 0>: 28, <Actions.Buy: 1>: 60, <Actions.Hold: 2>: 132}
+Test info: {'total_reward': -5.907716217041113, 'total_profit': 0.75790278409258, 'position': <Positions.Long: 1>}
+Window Size: 40
+Test action stats: {<Actions.Sell: 0>: 12, <Actions.Buy: 1>: 74, <Actions.Hold: 2>: 124}
+Test info: {'total_reward': 4.487741889953568, 'total_profit': 0.9732274977311492, 'position': <Positions.Long: 1>}
+Window Size: 50
+Test action stats: {<Actions.Sell: 0>: 19, <Actions.Buy: 1>: 65, <Actions.Hold: 2>: 116}
+Test info: {'total_reward': 2.014635314941323, 'total_profit': 0.9188368414371205, 'position': <Positions.Long: 1>}
+Window Size: 60
+Test action stats: {<Actions.Sell: 0>: 29, <Actions.Buy: 1>: 69, <Actions.Hold: 2>: 92}
+Test info: {'total_reward': -8.485009536743313, 'total_profit': 0.6759762147746988, 'position': <Positions.Long: 1>}
+Window Size: 70
+Test action stats: {<Actions.Sell: 0>: 30, <Actions.Buy: 1>: 70, <Actions.Hold: 2>: 80}
+Test info: {'total_reward': -7.6632227516175035, 'total_profit': 0.7751734790575023, 'position': <Positions.Long: 1>}
+Window Size: 150
+Test action stats: {<Actions.Sell: 0>: 6, <Actions.Buy: 1>: 42, <Actions.Hold: 2>: 52}
+Test info: {'total_reward': -11.96792222976687, 'total_profit': 0.7301035868431663, 'position': <Positions.Long: 1>}
+Window Size: 40
+Test action stats: {<Actions.Sell: 0>: 21, <Actions.Buy: 1>: 100, <Actions.Hold: 2>: 89}
+Test info: {'total_reward': 1.1457206535338216, 'total_profit': 0.8584361101318896, 'position': <Positions.Long: 1>}
+Window Size: 40
+Test action stats: {<Actions.Sell: 0>: 17, <Actions.Buy: 1>: 138, <Actions.Hold: 2>: 55}
+Test info: {'total_reward': 2.7813169097899575, 'total_profit': 0.8659332607337159, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 38, <Actions.Buy: 1>: 90, <Actions.Hold: 2>: 82}
+Test info: {'total_reward': -2.9483087539674315, 'total_profit': 0.7522779788472449, 'position': <Positions.Long: 1>}
+Window Size: 400000
+Test action stats: {<Actions.Sell: 0>: 24, <Actions.Buy: 1>: 74, <Actions.Hold: 2>: 112}
+Test info: {'total_reward': -7.051908702850426, 'total_profit': 0.7688563526637556, 'position': <Positions.Long: 1>}
+Window Size: 700000
+Test action stats: {<Actions.Sell: 0>: 37, <Actions.Buy: 1>: 65, <Actions.Hold: 2>: 108}
+Test info: {'total_reward': -9.882998943328992, 'total_profit': 0.6666176672729152, 'position': <Positions.Long: 1>}
+Window Size: 1000000
+Test action stats: {<Actions.Sell: 0>: 29, <Actions.Buy: 1>: 48, <Actions.Hold: 2>: 133}
+Test info: {'total_reward': -7.701689529419049, 'total_profit': 0.7500486644394447, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 29, <Actions.Buy: 1>: 114, <Actions.Hold: 2>: 67}
+Test info: {'total_reward': -3.9396480369569318, 'total_profit': 0.7126211520307792, 'position': <Positions.Long: 1>}
+Window Size: 400000
+Test action stats: {<Actions.Sell: 0>: 30, <Actions.Buy: 1>: 45, <Actions.Hold: 2>: 135}
+Test info: {'total_reward': -1.4101114082337247, 'total_profit': 0.8178527061479461, 'position': <Positions.Long: 1>}
+Window Size: 700000
+Test action stats: {<Actions.Sell: 0>: 36, <Actions.Buy: 1>: 87, <Actions.Hold: 2>: 87}
+Test info: {'total_reward': -2.5879413032533307, 'total_profit': 0.7935114014636375, 'position': <Positions.Long: 1>}
+Window Size: 1000000
+Test action stats: {<Actions.Sell: 0>: 25, <Actions.Buy: 1>: 43, <Actions.Hold: 2>: 142}
+Test info: {'total_reward': -1.611170902252276, 'total_profit': 0.8627580546636081, 'position': <Positions.Short: 0>}
+Window Size: 1300000
+Test action stats: {<Actions.Sell: 0>: 41, <Actions.Buy: 1>: 63, <Actions.Hold: 2>: 106}
+Test info: {'total_reward': 2.4750677490233173, 'total_profit': 0.8600880559344438, 'position': <Positions.Long: 1>}
+Window Size: 1600000
+Test action stats: {<Actions.Sell: 0>: 36, <Actions.Buy: 1>: 75, <Actions.Hold: 2>: 99}
+Test info: {'total_reward': -0.19180803298964832, 'total_profit': 0.7632731427140624, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 41, <Actions.Buy: 1>: 61, <Actions.Hold: 2>: 107}
+Test info: {'total_reward': 5.887295951843129, 'total_profit': 0.8652006556526239, 'position': <Positions.Long: 1>}
+Window Size: 400000
+Test action stats: {<Actions.Sell: 0>: 38, <Actions.Buy: 1>: 60, <Actions.Hold: 2>: 111}
+Test info: {'total_reward': 23.849572334289384, 'total_profit': 1.172314877519651, 'position': <Positions.Long: 1>}
+Window Size: 700000
+Test action stats: {<Actions.Sell: 0>: 24, <Actions.Buy: 1>: 99, <Actions.Hold: 2>: 86}
+Test info: {'total_reward': 5.568817672729352, 'total_profit': 0.9004635809234884, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 10, <Actions.Buy: 1>: 85, <Actions.Hold: 2>: 114}
+Test info: {'total_reward': 24.102783279418887, 'total_profit': 1.2549275684393257, 'position': <Positions.Long: 1>}
+Window Size: 400000
+Test action stats: {<Actions.Sell: 0>: 30, <Actions.Buy: 1>: 51, <Actions.Hold: 2>: 128}
+Test info: {'total_reward': -9.386263656616386, 'total_profit': 0.7090963473828762, 'position': <Positions.Long: 1>}
+Window Size: 700000
+Test action stats: {<Actions.Sell: 0>: 46, <Actions.Buy: 1>: 48, <Actions.Hold: 2>: 115}
+Test info: {'total_reward': -2.580464897155906, 'total_profit': 0.7946409840419187, 'position': <Positions.Long: 1>}
+Window Size: 1000000
+Test action stats: {<Actions.Sell: 0>: 38, <Actions.Buy: 1>: 58, <Actions.Hold: 2>: 113}
+Test info: {'total_reward': 0.6750910949705187, 'total_profit': 0.7953866973734741, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 10, <Actions.Buy: 1>: 85, <Actions.Hold: 2>: 114}
+Test info: {'total_reward': 24.102783279418887, 'total_profit': 1.2549275684393257, 'position': <Positions.Long: 1>}
+Window Size: 200000
+Test action stats: {<Actions.Sell: 0>: 27, <Actions.Buy: 1>: 70, <Actions.Hold: 2>: 112}
+Test info: {'total_reward': -0.20832586288462807, 'total_profit': 0.8632851041572271, 'position': <Positions.Long: 1>}
+Window Size: 10000
+Test action stats: {<Actions.Sell: 0>: 60, <Actions.Buy: 1>: 73, <Actions.Hold: 2>: 76}
+Test info: {'total_reward': 4.126259155273125, 'total_profit': 0.735754639839733, 'position': <Positions.Long: 1>}
+Window Size: 50000
+Test action stats: {<Actions.Sell: 0>: 33, <Actions.Buy: 1>: 73, <Actions.Hold: 2>: 103}
+Test info: {'total_reward': 4.135077285766464, 'total_profit': 0.8221323786898318, 'position': <Positions.Long: 1>}
+Window Size: 70000
+Test action stats: {<Actions.Sell: 0>: 18, <Actions.Buy: 1>: 91, <Actions.Hold: 2>: 100}
+Test info: {'total_reward': 5.128062152862441, 'total_profit': 0.8858223378663034, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 38, <Actions.Buy: 1>: 103, <Actions.Hold: 2>: 68}
+Test info: {'total_reward': -4.636690597534333, 'total_profit': 0.756321183125107, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 28, <Actions.Buy: 1>: 59, <Actions.Hold: 2>: 122}
+Test info: {'total_reward': 10.426832771301143, 'total_profit': 0.9626785779310256, 'position': <Positions.Long: 1>}
+Window Size: 400000
+Test action stats: {<Actions.Sell: 0>: 24, <Actions.Buy: 1>: 68, <Actions.Hold: 2>: 117}
+Test info: {'total_reward': -1.2513164138795076, 'total_profit': 0.817290110525706, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 28, <Actions.Buy: 1>: 11, <Actions.Hold: 2>: 170}
+Test info: {'total_reward': -3.9779277801514183, 'total_profit': 0.8986382449461999, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 44, <Actions.Buy: 1>: 13, <Actions.Hold: 2>: 152}
+Test info: {'total_reward': -3.0972986602783976, 'total_profit': 0.8689571320965114, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 48, <Actions.Buy: 1>: 28, <Actions.Hold: 2>: 133}
+Test info: {'total_reward': 6.298540096282842, 'total_profit': 0.9558826226482577, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 37, <Actions.Buy: 1>: 45, <Actions.Hold: 2>: 127}
+Test info: {'total_reward': 27.06101652145371, 'total_profit': 1.2214944288116396, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 36, <Actions.Buy: 1>: 31, <Actions.Hold: 2>: 142}
+Test info: {'total_reward': 0.20861183166487507, 'total_profit': 0.857097900124677, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 16, <Actions.Buy: 1>: 32, <Actions.Hold: 2>: 161}
+Test info: {'total_reward': 27.400081996917613, 'total_profit': 1.2763097462521966, 'position': <Positions.Long: 1>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 24, <Actions.Buy: 1>: 38, <Actions.Hold: 2>: 147}
+Test info: {'total_reward': -3.037879981994692, 'total_profit': 0.8431174785277601, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 24, <Actions.Buy: 1>: 44, <Actions.Hold: 2>: 141}
+Test info: {'total_reward': 14.148422946929784, 'total_profit': 1.079900156436207, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 13, <Actions.Buy: 1>: 105, <Actions.Hold: 2>: 91}
+Test info: {'total_reward': 8.320932445525983, 'total_profit': 0.9654468055627773, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 7, <Actions.Buy: 1>: 44, <Actions.Hold: 2>: 158}
+Test info: {'total_reward': 20.85799106597893, 'total_profit': 1.2295005433356105, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 14, <Actions.Buy: 1>: 164, <Actions.Hold: 2>: 31}
+Test info: {'total_reward': 20.847729797363186, 'total_profit': 1.140397466815519, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 9, <Actions.Buy: 1>: 42, <Actions.Hold: 2>: 158}
+Test info: {'total_reward': 16.520771255493088, 'total_profit': 1.1524082823888866, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 16, <Actions.Buy: 1>: 37, <Actions.Hold: 2>: 156}
+Test info: {'total_reward': -3.263217239379962, 'total_profit': 0.8268133444068836, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 18, <Actions.Buy: 1>: 162, <Actions.Hold: 2>: 29}
+Test info: {'total_reward': 9.954494247436415, 'total_profit': 0.988232053497916, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 9, <Actions.Buy: 1>: 42, <Actions.Hold: 2>: 158}
+Test info: {'total_reward': 16.520771255493088, 'total_profit': 1.1524082823888866, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 10, <Actions.Buy: 1>: 186, <Actions.Hold: 2>: 13}
+Test info: {'total_reward': 13.865805606841967, 'total_profit': 1.1058076957406522, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 11, <Actions.Buy: 1>: 119, <Actions.Hold: 2>: 79}
+Test info: {'total_reward': 13.171392498016282, 'total_profit': 1.0617608701051025, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 11, <Actions.Buy: 1>: 72, <Actions.Hold: 2>: 126}
+Test info: {'total_reward': 17.013524227142263, 'total_profit': 1.1524360917644805, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 11, <Actions.Buy: 1>: 122, <Actions.Hold: 2>: 76}
+Test info: {'total_reward': 15.766050262451074, 'total_profit': 1.0653602959225166, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 12, <Actions.Buy: 1>: 32, <Actions.Hold: 2>: 165}
+Test info: {'total_reward': 23.387420463561973, 'total_profit': 1.2626887568748415, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 17, <Actions.Buy: 1>: 115, <Actions.Hold: 2>: 77}
+Test info: {'total_reward': 10.580355567932031, 'total_profit': 0.9886830056037079, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 13, <Actions.Buy: 1>: 74, <Actions.Hold: 2>: 122}
+Test info: {'total_reward': 11.352500648498435, 'total_profit': 1.042753551901828, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 18, <Actions.Buy: 1>: 121, <Actions.Hold: 2>: 70}
+Test info: {'total_reward': 9.60763792037951, 'total_profit': 0.9537395207638529, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 19, <Actions.Buy: 1>: 19, <Actions.Hold: 2>: 171}
+Test info: {'total_reward': 23.933965377807525, 'total_profit': 1.2901693298359007, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 14, <Actions.Buy: 1>: 115, <Actions.Hold: 2>: 80}
+Test info: {'total_reward': 0.4335371140390628, 'total_profit': 1.4485010964817897, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 117, <Actions.Buy: 1>: 38, <Actions.Hold: 2>: 54}
+Test info: {'total_reward': 0.6343286686390633, 'total_profit': inf, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 14, <Actions.Buy: 1>: 41, <Actions.Hold: 2>: 154}
+Test info: {'total_reward': 0.670784057974815, 'total_profit': 5.335018788151358, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 13, <Actions.Buy: 1>: 62, <Actions.Hold: 2>: 134}
+Test info: {'total_reward': -0.1354825696349148, 'total_profit': 0.2651446602414944, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 33, <Actions.Buy: 1>: 93, <Actions.Hold: 2>: 83}
+Test info: {'total_reward': 0.2215330533683283, 'total_profit': 0.9538537266268134, 'position': <Positions.Long: 1>}
+Window Size: 1000000
+Test action stats: {<Actions.Sell: 0>: 145, <Actions.Buy: 1>: 30, <Actions.Hold: 2>: 34}
+Test info: {'total_reward': 0.05413281887769683, 'total_profit': 1.115943401805858, 'position': <Positions.Long: 1>}
+Window Size: 1000000
+Test action stats: {<Actions.Sell: 0>: 128, <Actions.Buy: 1>: 81, <Actions.Hold: 2>: 0}
+Test info: {'total_reward': -0.3198405653983364, 'total_profit': 0.4068421740814319, 'position': <Positions.Short: 0>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 171, <Actions.Buy: 1>: 36, <Actions.Hold: 2>: 2}
+Test info: {'total_reward': 0.10946319788694359, 'total_profit': 1.1783114806674306, 'position': <Positions.Short: 0>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 96, <Actions.Buy: 1>: 113, <Actions.Hold: 2>: 0}
+Test info: {'total_reward': 0.325616711527108, 'total_profit': 1.6093791303923686, 'position': <Positions.Long: 1>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 164, <Actions.Buy: 1>: 26, <Actions.Hold: 2>: 19}
+Test info: {'total_reward': 0.016253070533275404, 'total_profit': 1.0112175976865383, 'position': <Positions.Short: 0>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 165, <Actions.Buy: 1>: 44, <Actions.Hold: 2>: 0}
+Test info: {'total_reward': 0.13387966528534836, 'total_profit': 0.9365842201734597, 'position': <Positions.Long: 1>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 185, <Actions.Buy: 1>: 24, <Actions.Hold: 2>: 0}
+Test info: {'total_reward': 0.12184162437915802, 'total_profit': 933.6124404929518, 'position': <Positions.Short: 0>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 46, <Actions.Buy: 1>: 154, <Actions.Hold: 2>: 9}
+Test info: {'total_reward': 25.710002899169922, 'total_profit': 0.8728913007525758, 'position': <Positions.Long: 1>}
+Window Size: 500000
+Test action stats: {<Actions.Sell: 0>: 46, <Actions.Buy: 1>: 160, <Actions.Hold: 2>: 3}
+Test info: {'total_reward': 27.509014129638672, 'total_profit': 0.8369349992979995, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 13, <Actions.Buy: 1>: 41, <Actions.Hold: 2>: 155}
+Test info: {'total_reward': 8.041600151061871, 'total_profit': 0.9689908526372807, 'position': <Positions.Long: 1>}
+Window Size: 100000
+Test action stats: {<Actions.Sell: 0>: 10, <Actions.Buy: 1>: 33, <Actions.Hold: 2>: 166}
+Test info: {'total_reward': 27.112512054443314, 'total_profit': 1.291732718164493, 'position': <Positions.Long: 1>}
+Seed: 2023
+Timestep: 1000
+Window Size: 40
+Learning rate: 0.0001
+Test action stats: {<Actions.Sell: 0>: 70, <Actions.Buy: 1>: 66, <Actions.Hold: 2>: 73}
+Test info: {'total_reward': -5.704938468933442, 'total_profit': 0.6311100555070405, 'position': <Positions.Short: 0>}
+Cumulative Returns: -0.36888994449295964
+Seed: 2023
+Timestep: 1000
+Window Size: 40
+Learning rate: 0.0001
+Test action stats: {<Actions.Sell: 0>: 70, <Actions.Buy: 1>: 66, <Actions.Hold: 2>: 73}
+Test info: {'total_reward': -5.704938468933442, 'total_profit': 0.6311100555070405, 'position': <Positions.Short: 0>}
+Cumulative Returns: -36.888994449295964
+Seed: 2023
+Timestep: 100000
+Window Size: 40
+Learning rate: 0.0001
+Test action stats: {<Actions.Sell: 0>: 8, <Actions.Buy: 1>: 14, <Actions.Hold: 2>: 187}
+Test info: {'total_reward': 17.520141792297338, 'total_profit': 1.175584960187295, 'position': <Positions.Long: 1>}
+Cumulative Returns: 17.558496018729496
+Seed: 2023
+Timestep: 100000
+Window Size: 40
+Learning rate: 1e-05
+Test action stats: {<Actions.Sell: 0>: 17, <Actions.Buy: 1>: 75, <Actions.Hold: 2>: 117}
+Test info: {'total_reward': 21.847588672637833, 'total_profit': 1.145076773234981, 'position': <Positions.Long: 1>}
+Cumulative Returns: 14.507677323498115
+Seed: 2023
+Timestep: 100000
+Window Size: 40
+Learning rate: 1e-06
+Test action stats: {<Actions.Sell: 0>: 60, <Actions.Buy: 1>: 72, <Actions.Hold: 2>: 77}
+Test info: {'total_reward': -2.675099925995177, 'total_profit': 0.6670637916737369, 'position': <Positions.Short: 0>}
+Cumulative Returns: -33.29362083262628
+Seed: 2023
+Timestep: 100000
+Window Size: 40
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 8, <Actions.Buy: 1>: 11, <Actions.Hold: 2>: 190}
+Test info: {'total_reward': 17.520141792297338, 'total_profit': 1.1923969369487142, 'position': <Positions.Long: 1>}
+Cumulative Returns: 19.23969369487142
+Seed: 2023
+Timestep: 300000
+Window Size: 40
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 2, <Actions.Buy: 1>: 1, <Actions.Hold: 2>: 206}
+Test info: {'total_reward': 25.68348476409912, 'total_profit': 1.390349164985275, 'position': <Positions.Short: 0>}
+Cumulative Returns: 39.03491649852751
+Seed: 2023
+Timestep: 300000
+Window Size: 40
+Learning rate: 3e-05
+Test action stats: {<Actions.Sell: 0>: 7, <Actions.Buy: 1>: 40, <Actions.Hold: 2>: 162}
+Test info: {'total_reward': 23.124815292358377, 'total_profit': 1.320470248794047, 'position': <Positions.Long: 1>}
+Cumulative Returns: 32.047024879404695
+Seed: 2023
+Timestep: 300000
+Window Size: 40
+Learning rate: 3e-06
+Test action stats: {<Actions.Sell: 0>: 15, <Actions.Buy: 1>: 94, <Actions.Hold: 2>: 100}
+Test info: {'total_reward': 15.98555213928212, 'total_profit': 1.0498171419756444, 'position': <Positions.Long: 1>}
+Cumulative Returns: 4.981714197564435
+Seed: 2023
+Timestep: 300000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 12, <Actions.Buy: 1>: 207, <Actions.Hold: 2>: 0}
+Test info: {'total_reward': 10.579671134948633, 'total_profit': 1.005894278898616, 'position': <Positions.Long: 1>}
+Cumulative Returns: 0.589427889861649
+Seed: 2023
+Timestep: 1000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 69, <Actions.Buy: 1>: 58, <Actions.Hold: 2>: 92}
+Test info: {'total_reward': 17.25211353301981, 'total_profit': 0.5625950147910147, 'position': <Positions.Long: 1>}
+Cumulative Returns: -43.74049852089854
+Seed: 2023
+Timestep: 100000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 0, <Actions.Buy: 1>: 20, <Actions.Hold: 2>: 199}
+Test info: {'total_reward': 15.51515556335449, 'total_profit': 1.42426582123743, 'position': <Positions.Long: 1>}
+Cumulative Returns: 42.426582123742996
+Seed: 2023
+Timestep: 100000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 104, <Actions.Buy: 1>: 101, <Actions.Hold: 2>: 14}
+Test info: {'total_reward': 11.220995559692412, 'total_profit': 0.4583942997706168, 'position': <Positions.Long: 1>}
+Cumulative Returns: -54.16057002293832
+Seed: 2023
+Timestep: 100000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 107, <Actions.Buy: 1>: 86, <Actions.Hold: 2>: 26}
+Test info: {'total_reward': -24.452209663391784, 'total_profit': 0.4876267963660939, 'position': <Positions.Short: 0>}
+Cumulative Returns: -51.237320363390594
+Seed: 2023
+Timestep: 500000
+Window Size: 30
+Learning rate: 0.0003
+Test action stats: {<Actions.Sell: 0>: 207, <Actions.Buy: 1>: 6, <Actions.Hold: 2>: 6}
+Test info: {'total_reward': -1.9798054885865284, 'total_profit': 0.8968956040559187, 'position': <Positions.Short: 0>}
+Cumulative Returns: -10.310439594408106
